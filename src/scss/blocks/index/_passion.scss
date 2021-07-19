@@ -1,0 +1,74 @@
+.passion{
+  padding: 5rem 0;
+  margin-bottom: 0;
+}
+
+.passion__image-bg{
+  position: absolute;
+  width: 30%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.passion__image-bg1{
+  right: 0;
+  top: 0;
+}
+
+.passion__image-bg2{
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.passion__title{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.passion__inner{
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.passion__image{
+  box-shadow: 0 0 20px 0 rgb(199, 199, 199);
+}
+
+.passion__item-box1,
+.passion__item-box4{
+  width: 20%;
+  padding: 0 10px;
+}
+
+.passion__item-box2,
+.passion__item-box3{
+  width: 30%;
+  padding: 0 10px;
+}
+
+.passion__image1,
+.passion__image4{
+  height: 500px;
+}
+
+.passion__image2,
+.passion__image3{
+  height: 680px;
+}
+
+.passion__image1{
+  margin-top: 210px;
+}
+
+.passion__image3{
+  margin-top: 60px;
+}
+
+.passion__image4{
+  margin-top: 30px;
+}
+

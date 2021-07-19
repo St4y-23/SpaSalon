@@ -1,0 +1,56 @@
+.insta__box{
+  text-align: center;
+  max-width: 650px;
+  padding: 0 5%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.insta__title{
+  margin-bottom: 1rem;
+}
+
+.insta__inner{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7px;
+  margin-bottom: 2rem;
+}
+
+.insta__col{
+  width: 16.6667%;
+  padding: 0 7px;
+  margin: -7px 0;
+}
+
+.insta__item{
+  position: relative;
+  padding: 7px 0;
+  border-radius: 20px;
+}
+
+.insta__item-sml{
+  height: 40%;
+}
+
+.insta__item-lrg{
+  height: 60%;
+}
+
+.insta__image{
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  
+  img{
+    transition: linear .2s;
+  }
+}
+
+.mfp-bottom-bar{
+  display: none;
+}
+
+.selector{
+  transform: '200ms scale ease-in-out';
+}

@@ -1,0 +1,22 @@
+$text: #000;
+$primary: #87e84b;
+$second: #27ae60;
+$bg: #f3efee;
+$grey: #9e9d9b;
+$skin: #f6eeeb;
+$green1: #72ab41;
+$green2: #4f853c;
+$green3: #336633;
+$brow: #b07d56;
+
+$grad: linear-gradient(to left, #87e84b, #27ae60);
+
+
+@mixin center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+

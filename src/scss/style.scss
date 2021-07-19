@@ -1,0 +1,30 @@
+@import "helpers/vars";
+@import "helpers/global";
+@import "helpers/fonts";
+@import "helpers/sprites";
+
+// Blocks
+@import "blocks/header";
+
+
+@import "blocks/index/intro";
+@import "blocks/index/about";
+@import "blocks/index/services";
+@import "blocks/index/benefits";
+@import "blocks/index/passion";
+@import "blocks/index/cosmetics";
+@import "blocks/index/sertificate";
+@import "blocks/index/license";
+@import "blocks/index/testimonials";
+@import "blocks/index/insta";
+@import "blocks/index/faq";
+@import "blocks/index/map";
+
+
+
+
+@import "blocks/footer";
+
+// Media
+@import "helpers/media";
+

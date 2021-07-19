@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+	
+	<title>SpaSalon</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="content">
+
+		<!-- Preloader -->
+		<div id="preloader">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="preloader__bg"></div>
+
+		<!-- Sprites -->
+		<svg style="display: none;">
+
+  <symbol id="arrow" viewBox="0 0 451.847 451.847">
+    <g>
+      <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+		c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+		c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+    </g>
+  </symbol>
+
+  <symbol id="vk" viewBox="0 0 24 24">
+    <g>
+      <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+    </g>
+  </symbol>
+
+  <symbol id="phone" viewBox="0 0 512.006 512.006">
+    <g>
+      <path d="M502.05,407.127l-56.761-37.844L394.83,335.65c-9.738-6.479-22.825-4.355-30.014,4.873l-31.223,40.139
+				c-6.707,8.71-18.772,11.213-28.39,5.888c-21.186-11.785-46.239-22.881-101.517-78.23c-55.278-55.349-66.445-80.331-78.23-101.517
+				c-5.325-9.618-2.822-21.683,5.888-28.389l40.139-31.223c9.227-7.188,11.352-20.275,4.873-30.014l-32.6-48.905L104.879,9.956
+				C98.262,0.03,85.016-2.95,74.786,3.185L29.95,30.083C17.833,37.222,8.926,48.75,5.074,62.277
+				C-7.187,106.98-9.659,205.593,148.381,363.633s256.644,155.56,301.347,143.298c13.527-3.851,25.055-12.758,32.194-24.876
+				l26.898-44.835C514.956,426.989,511.976,413.744,502.05,407.127z"/>
+			<path d="M291.309,79.447c82.842,0.092,149.977,67.226,150.069,150.069c0,4.875,3.952,8.828,8.828,8.828
+				c4.875,0,8.828-3.952,8.828-8.828c-0.102-92.589-75.135-167.622-167.724-167.724c-4.875,0-8.828,3.952-8.828,8.828
+				C282.481,75.494,286.433,79.447,291.309,79.447z"/>
+			<path d="M291.309,132.412c53.603,0.063,97.04,43.501,97.103,97.103c0,4.875,3.952,8.828,8.828,8.828
+				c4.875,0,8.828-3.952,8.828-8.828c-0.073-63.349-51.409-114.686-114.759-114.759c-4.875,0-8.828,3.952-8.828,8.828
+				C282.481,128.46,286.433,132.412,291.309,132.412z"/>
+			<path d="M291.309,185.378c24.365,0.029,44.109,19.773,44.138,44.138c0,4.875,3.952,8.828,8.828,8.828
+				c4.875,0,8.828-3.952,8.828-8.828c-0.039-34.111-27.682-61.754-61.793-61.793c-4.875,0-8.828,3.952-8.828,8.828
+				C282.481,181.426,286.433,185.378,291.309,185.378z"/>
+    </g>
+  </symbol>
+
+  <symbol id="spa" viewBox="0 0 504.874 504.874">
+    <g>
+      <path d="m500.702 345.015c-40.506-28.278-80.635-47.432-119.461-57.05 18.746-61.023-1.073-119.44-2.039-122.213-1.958-5.621-8.932-8.373-14.223-5.495-18.686 10.167-35.565 21.189-50.38 32.871-10.128-35.419-28.363-72.13-54.354-109.363-3.874-5.548-12.506-5.578-16.399 0-25.988 37.226-44.221 73.931-54.35 109.346-14.811-11.676-31.681-22.693-50.358-32.855-5.312-2.892-12.26-.138-14.223 5.495-.967 2.776-20.827 61.314-1.979 122.407-38.324 9.464-78.22 28.552-118.764 56.854-5.548 3.874-5.578 12.506 0 16.399 60.743 42.404 119.343 63.869 174.317 63.867 25.276-.011 50.492-4.712 73.939-14.195 20.251 8.193 44.957 14.193 73.929 14.193 15.759 0 15.621-20 .01-20-18.085 0-34.311-2.597-48.631-6.642 5.776-3.384 10.946-6.809 15.479-10.09 16.492-11.934 33.783-19.992 48.525-34.723 13.572-13.561 24.584-29.471 32.422-46.987 33.296 7.913 67.837 23.465 102.952 46.379-24.303 15.868-48.311 28.239-71.531 36.849-12.033 4.459-5.122 23.229 6.951 18.752 28.673-10.629 58.336-26.577 88.168-47.401 5.548-3.873 5.578-12.505 0-16.398zm-248.657-237.664c23.776 36.408 39.578 71.976 47.027 105.894 13.158 59.916-.932 127.016-47.027 169.762-46.095-42.746-60.185-109.846-47.027-169.762 7.449-33.919 23.251-69.486 47.027-105.894zm-111.447 76.701c16.337 9.59 30.97 19.86 43.702 30.641-10.196 52.251-1.702 106.899 27.917 151.587-66.266-37.12-88.386-110.641-71.619-182.228zm-112.822 169.149c35.117-22.931 69.426-38.418 102.263-46.179 16.418 36.561 46.401 64.146 81.989 81.786 4.573 3.294 9.737 6.697 15.474 10.044-75.041 21.421-151.238-14.166-199.726-45.651zm264.082 13.104c29.629-44.691 38.129-99.337 27.937-151.593 12.737-10.788 27.377-21.064 43.724-30.66 16.772 71.619-5.363 145.136-71.661 182.253z"/><path d="m379.972 408.458c-2.067-5.039-8.036-7.499-13.06-5.409-5.026 2.091-7.489 8.017-5.4 13.05 2.088 5.029 8.013 7.501 13.051 5.41 5.027-2.087 7.506-8.014 5.409-13.051z"/>
+    </g>
+  </symbol>
+
+  <symbol id="massage" viewBox="0 0 512 512">
+    <g>
+      <path d="m505.923 35.504c-1.879-2.822-4.87-4.783-8.2-5.377l-62.459-11.198c-3.29-.593-6.609.131-9.354 2.042-2.737 1.906-4.571 4.765-5.164 8.055l-14.145 78.917c-11.47-33.741-34.152-63.021-64.276-82.471-48.617-31.509-110.261-33.638-160.389-7.205-3.664 1.932-5.068 6.469-3.136 10.132 1.932 3.665 6.469 5.069 10.132 3.136 42.105-22.202 92.975-22.12 135.405.716-33.687 12.047-72.24 29.4-104.07 46.992-32.873 18.169-74.307 45.303-85.55 71.605-.025.054-.051.107-.075.161l-18.662-25.759c6.912-28.705 22.891-55.116 45.247-74.665 3.118-2.727 3.436-7.465.709-10.583s-7.465-3.436-10.583-.709c-21.056 18.413-36.986 42.348-45.953 68.668l-14.15-78.942c-.591-3.284-2.425-6.142-5.163-8.048-2.744-1.911-6.066-2.636-9.342-2.044l-62.465 11.198c-3.335.596-6.326 2.556-8.205 5.378-1.881 2.826-2.536 6.346-1.793 9.672l41.06 182.338c4.945 21.997 17.687 41.469 35.879 54.83l91.414 67.114c3.009 2.206 6.544 3.271 10.053 3.271 1.08 0 2.153-.122 3.211-.322v28.682c0 2.145-1.377 4.001-3.434 4.623-5.143 1.558-10.627 3.107-16.433 4.748-24.549 6.938-52.373 14.801-74.859 28.82-27.036 16.856-40.744 39.862-40.744 68.38v7.11c0 9.501 7.73 17.23 17.23 17.23h376.681c9.501 0 17.23-7.73 17.23-17.23v-7.11c0-32.568-17.057-57.027-52.145-74.773-3.696-1.87-8.208-.389-10.078 3.308-1.869 3.696-.388 8.208 3.308 10.078 29.961 15.152 43.915 34.659 43.915 61.387v7.11c0 1.23-1 2.23-2.23 2.23h-376.681c-1.229 0-2.23-1-2.23-2.23v-7.11c0-53.182 58.043-69.585 104.682-82.765 5.876-1.661 11.425-3.229 16.697-4.826 8.428-2.545 14.091-10.173 14.091-18.98v-43.047c.446-1.053.841-2.121 1.184-3.202 19.234 9.776 38.827 15.469 53.916 15.469 15.084 0 34.678-5.691 53.917-15.463.343 1.08.738 2.147 1.183 3.198v43.045c0 8.807 5.663 16.435 14.085 18.978 5.294 1.604 10.863 3.178 16.759 4.845 9.424 2.664 19.17 5.419 28.951 8.625.776.254 1.563.375 2.337.375 3.154 0 6.09-2.006 7.126-5.166 1.29-3.937-.855-8.173-4.791-9.463-10.075-3.302-19.972-6.1-29.543-8.805-5.826-1.647-11.329-3.203-16.495-4.768-2.051-.619-3.428-2.476-3.428-4.621v-28.683c1.058.199 2.131.322 3.211.322 3.51 0 7.047-1.066 10.058-3.273l91.411-67.111c18.191-13.36 30.933-32.833 35.878-54.827l41.062-182.355c.739-3.312.084-6.832-1.797-9.657zm-109.902 89.745-18.642 25.734c-14.607-43.083-55.174-72.924-101.97-72.924h-20.422c32.255-15.876 63.544-28.217 85.654-35.561 28.505 20.705 47.671 50.678 55.38 82.751zm-214.513 212.115-91.409-67.11c-15.273-11.217-25.971-27.565-30.123-46.032l-40.486-179.792 57.438-10.297 14.649 81.729c.199 1.111.646 2.163 1.309 3.077l47.054 64.951 8.839 49.349c.833 4.621-1.572 9.215-5.841 11.171-.792.363-1.625.625-2.468.776-5.585.998-10.953-2.736-11.959-8.321l-9.15-51.03c-.731-4.078-4.635-6.791-8.706-6.059-4.077.731-6.79 4.629-6.059 8.706l9.151 51.035c2.297 12.766 13.852 21.586 26.51 20.78.726 2.686.481 5.158 2.752 7.479l39.59 40.43c7.652 7.815 8.357 20.217 1.637 28.851-.628.811-1.855.946-2.728.307zm21.98-18.752c-1.031-7.668-4.44-15.048-10.17-20.899l-38.044-38.851-.828-4.05c7.125-5.69 10.769-14.937 9.095-24.224l-9.14-51.03c-.199-1.111-.646-2.164-1.309-3.078l-7.222-9.969c.693-3.286 1.582-6.572 2.652-9.81 7.33-17.115 34.409-39.386 76.438-62.9 9.781-1.239 13.038-.638 50.448-.742 44.058-.122 81.708 30.718 90.706 73.472l-7.207 9.948c-.662.914-1.109 1.966-1.309 3.076l-9.148 51.029c-1.691 9.432 2.107 18.602 9.102 24.216l-.83 4.061-38.044 38.851c-5.732 5.854-9.141 13.237-10.171 20.909-18.692 10.345-38.532 16.689-52.51 16.689-13.981 0-33.823-6.348-52.509-16.698zm248.534-94.388c-4.151 18.465-14.849 34.813-30.121 46.029l-91.406 67.107c-.877.643-2.104.506-2.738-.308-6.717-8.63-6.011-21.031 1.641-28.846l39.59-40.43c2.275-2.324 2.026-4.793 2.753-7.482 12.643.816 24.219-8.008 26.509-20.782l9.148-51.028c.731-4.077-1.981-7.975-6.059-8.706s-7.975 1.981-8.706 6.059l-9.148 51.028c-1.002 5.588-6.359 9.318-11.952 8.317-.835-.15-1.628-.397-2.371-.728-.063-.03-.127-.059-.191-.087-4.112-1.934-6.594-6.456-5.755-11.137l8.846-49.34 47.051-64.952c.662-.914 1.109-1.966 1.309-3.077l14.649-81.729 57.438 10.297z"/><path d="m217.883 189.492c-12.077-7.41-24.844-7.41-36.921 0-3.53 2.166-4.637 6.784-2.47 10.315 2.166 3.53 6.783 4.637 10.315 2.47 7.243-4.443 13.99-4.443 21.232 0 1.224.751 2.578 1.108 3.915 1.108 2.522 0 4.984-1.271 6.4-3.579 2.165-3.53 1.059-8.148-2.471-10.314z"/><path d="m323.193 202.277c1.224.751 2.578 1.108 3.915 1.108 2.522 0 4.984-1.271 6.4-3.579 2.167-3.531 1.06-8.149-2.47-10.315-12.077-7.41-24.844-7.409-36.921 0-3.53 2.166-4.637 6.784-2.47 10.315 2.166 3.53 6.782 4.637 10.315 2.47 7.24-4.441 13.988-4.442 21.231.001z"/><path d="m279.869 266.249c-15.169 6.564-32.569 6.564-47.738 0-3.803-1.645-8.217.104-9.862 3.905s.103 8.217 3.905 9.862c9.478 4.101 19.652 6.152 29.826 6.152s20.349-2.051 29.826-6.152c3.802-1.645 5.55-6.061 3.905-9.862s-6.061-5.55-9.862-3.905z"/>
+    </g>
+  </symbol>
+
+  <symbol id="flower" viewBox="0 0 512 512">
+    <g>
+      <path d="M434.809,232.436c-2.788-2.788-5.731-5.424-8.778-7.919A117.468,117.468,0,0,0,456,146.05V120a8,8,0,0,0-8-8H400V64a8,8,0,0,0-8-8H365.95a118.239,118.239,0,0,0-28.519,3.494,118.741,118.741,0,0,0-17.719-22.625L301.729,18.417A8,8,0,0,0,296.063,16a7.81,7.81,0,0,0-5.7,2.327l-58.436,58.1a119.261,119.261,0,0,0-8.08,8.94A117.455,117.455,0,0,0,146.05,56H120a8,8,0,0,0-8,8v48H64a8,8,0,0,0-8,8v26.05a118.335,118.335,0,0,0,3.24,27.479A118.935,118.935,0,0,0,36.25,191.5L18.343,209.4a8,8,0,0,0,0,11.313l58.849,58.849c2.788,2.789,5.731,5.424,8.777,7.919A117.468,117.468,0,0,0,56,365.95V392a8,8,0,0,0,8,8h48v48a8,8,0,0,0,8,8h26.05a118.239,118.239,0,0,0,28.519-3.494,118.741,118.741,0,0,0,17.719,22.625l17.983,18.452A8,8,0,0,0,215.937,496H216a8,8,0,0,0,5.641-2.327l58.436-58.1a119.078,119.078,0,0,0,8.063-8.955A117.453,117.453,0,0,0,365.95,456H392a8,8,0,0,0,8-8V400h48a8,8,0,0,0,8-8V365.95a118.326,118.326,0,0,0-3.24-27.478,118.918,118.918,0,0,0,22.99-17.967L493.657,302.6a8,8,0,0,0,0-11.313ZM440,146.05A102.065,102.065,0,0,1,338.05,248H319.482a63.661,63.661,0,0,0-12.956-31.212l13.149-13.15a117.076,117.076,0,0,0,34.245-74.911A103.4,103.4,0,0,1,365.95,128H440ZM256,304a48,48,0,1,1,48-48A48.055,48.055,0,0,1,256,304ZM365.95,72H384v40H365.95a119.388,119.388,0,0,0-11.977.61,117.311,117.311,0,0,0-9.05-38.422A102.4,102.4,0,0,1,365.95,72ZM295.911,35.371l12.378,12.7c.024.024.048.049.073.073a102.066,102.066,0,0,1,0,144.179l-13.149,13.149A63.672,63.672,0,0,0,264,192.518V173.95A117.453,117.453,0,0,0,235.2,96.8a102.9,102.9,0,0,1,8.022-9.037ZM128,72h18.05A102.065,102.065,0,0,1,248,173.95v18.568a64.139,64.139,0,0,0-54.291,48.844A102.343,102.343,0,0,1,128,146.05ZM72,146.05V128h40v18.05c0,3.749.2,7.462.551,11.141a116.825,116.825,0,0,0-38.569,8.882A102.555,102.555,0,0,1,72,146.05ZM35.313,215.059l12.251-12.251a100.823,100.823,0,0,1,67.621-29.721,118.753,118.753,0,0,0,55.537,74.959,117.423,117.423,0,0,0-73.231,28.169,103.321,103.321,0,0,1-8.986-7.965ZM72,365.95A102.065,102.065,0,0,1,173.95,264h18.568a63.661,63.661,0,0,0,12.956,31.212l-13.149,13.15a117.076,117.076,0,0,0-34.245,74.91,103.186,103.186,0,0,1-12.03.728H72ZM146.05,440H128V400h18.05a119.388,119.388,0,0,0,11.977-.61,117.311,117.311,0,0,0,9.05,38.422A102.4,102.4,0,0,1,146.05,440Zm70.039,36.629-12.378-12.7c-.024-.024-.048-.049-.073-.073a101.951,101.951,0,0,1,0-144.179l13.149-13.149A63.672,63.672,0,0,0,248,319.482V338.05a117.449,117.449,0,0,0,28.792,77.14,103.31,103.31,0,0,1-8.012,9.05ZM384,440H365.95A102.065,102.065,0,0,1,264,338.05V319.482a64.139,64.139,0,0,0,54.291-48.844A102.345,102.345,0,0,1,384,365.95Zm56-74.05V384H400V365.95c0-3.751-.2-7.466-.551-11.147a116.83,116.83,0,0,0,38.57-8.876A102.639,102.639,0,0,1,440,365.95Zm24.436-56.758a100.866,100.866,0,0,1-67.621,29.721,118.755,118.755,0,0,0-55.537-74.959,117.419,117.419,0,0,0,73.231-28.169,103.193,103.193,0,0,1,8.986,7.965l53.192,53.191Z"/>
+    </g>
+  </symbol>
+
+</svg>
+
+
+<!-- USE -->
+<!--  
+
+<svg class="arrow__icon">
+  <use xlink:href="#arrow"></use>
+</svg>
+
+-->
+
+		<!-- Header -->
+		<header class="header" id="header">
+  <div class="container">
+
+    <div class="header__inner">
+
+      <a class="header__logo" href="#">Spa<span>Salon</span></a>
+
+      <nav class="header__menu">
+        <a class="header__menu-link" href="#" data-scroll="#about">Услуги</a>
+        <a class="header__menu-link" href="#" data-scroll="#about">Кто я</a>
+        <a class="header__menu-link" href="#" data-scroll="#about">Сертификаты</a>
+        <a class="header__menu-link" href="#" data-scroll="#about">Отзывы</a>
+        <a class="header__menu-link" href="#" data-scroll="#about">Контакты</a>
+
+        <a class="header__call header__call-menu" href="#">
+
+          <div class="header__call-icon">
+            <svg class="header__icon">
+              <use xlink:href="#phone"></use>
+            </svg>
+          </div>
+  
+          <div class="header__call-num">+7 (950) 151-23-89</div>
+          
+        </a>
+
+      </nav>
+
+      <a class="header__call header__call-header" href="#">
+
+        <div class="header__call-icon">
+          <svg class="header__icon">
+            <use xlink:href="#phone"></use>
+          </svg>
+        </div>
+
+        <div class="header__call-num">+7 (950) 151-23-89</div>
+        
+      </a>
+
+      <div class="ham__box">
+        <svg class="ham ham6" viewBox="0 0 100 100" onclick="this.classList.toggle('active')">
+          <path class="line top"
+            d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+          <path class="line middle"
+            d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+          <path class="line bottom"
+            d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+        </svg>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+		<!-- Intro -->
+		<section class="intro">
+
+			<div class="intro__icon-box">
+				<svg class="intro__icon">
+					<use xlink:href="#spa"></use>
+				</svg>
+			</div>
+
+			<div class="leaf leaf_0 rellax" data-rellax-speed="-3">
+				<div class="leaf__image">
+					<picture>
+						<source class="img" srcset="img/leaf/leaf_04.webp" type="image/webp">
+						<img class="img" src="img/leaf/leaf_04.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="leaf leaf_1 rellax" data-rellax-speed="-5">
+				<div class="leaf__image">
+					<picture>
+						<source class="img" srcset="img/leaf/leaf_01.webp" type="image/webp">
+						<img class="img" src="img/leaf/leaf_01.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="intro__inner">
+
+					<div class="intro__box">
+						<h1 class="intro__title title">Почувствуйте <span>гармонию души и тела,</span> окунитесь в мир блаженства
+						</h1>
+						<p class="intro__text text">Массаж - прекрасный способ расслабиться, снять стресс, повысить свой иммунитет и
+							помочь организму победить многие заболевания.</p>
+							<div class="intro__btn-box"><a class="intro__btn btn" href="#"><span>Записаться</span></a></div>
+						
+					</div>
+
+					<div class="intro__image-box">
+						<div class="intro__image-gradient"></div>
+						<div class="intro__image">
+							<picture>
+								<source srcset="img/intro/intro.webp" type="image/webp">
+								<img src="img/intro/intro.png" alt="">
+							</picture>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<!-- About -->
+		<section class="about">
+
+			<div class="about__bg">
+				<div class="about__bg-image cover">
+					<div class="about__bg-rect rect"></div>
+					<picture>
+						<source srcset="img/cabinet.webp" type="image/webp">
+						<img src="img/cabinet.jpg" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="about__inner">
+
+					<div class="about__image-box">
+						<div class="about__image">
+							<picture>
+								<source class="img" srcset="img/girl.webp" type="image/webp">
+								<img class="img" src="img/girl.png" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="about__box">
+						<h6 class="about__box-title title">Новгородцева <span>Светлана</span></h6>
+						<div class="about__box-suptitle">Лицензированный массажист, специалист по скульптурной подтяжке лица</div>
+						<p class="about__box-text text">Массажная практика Светланы началась в декабре 2014 года, после окончания
+							Европейской школы массажа в Скоки, штан Иллинойс. За годы практики и помощи другим людям, она поняла, что
+							ежедневная работа и рутина превратились в страсть к жизни, котрая дала ей возможность увидеть всемирно
+							известных знаменитостейю политиков, предпринимателей и спортсменов, доверие и уважение всех клиентов стало
+							доказательством того, что она в нужном месте в жизни.</p>
+						<p class="about__box-text text">Светлана создала свои собственные методики, такие как "Массаж блаженства" и
+							другие, которые основаны на ее знаниях, ее собственном восприятии тела и тезниках которые она
+							разрабатывала на протяжении многих лет. Кроме того, она является первым Специалистом в Чикаго по Технике
+							Скульптурной подтяжки лица как 100% естественоому способу омоложения и трансформации, который обеспечивает
+							не только потрясающее физическое, но и эмоциональное освобождение.</p>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+		<!-- Services -->
+		<section class="services">
+
+			<div class="leaf leaf_2 rellax" data-rellax-speed="-1">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_02.webp" type="image/webp">
+						<img src="img/leaf/leaf_02.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="leaf leaf_3 rellax" data-rellax-speed="-3">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_03.webp" type="image/webp">
+						<img src="img/leaf/leaf_03.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="leaf leaf_4 rellax" data-rellax-speed="-2">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_04.webp" type="image/webp">
+						<img src="img/leaf/leaf_04.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+
+			<div class="container">
+
+				<h6 class="services__title title">Самые популярные <br> <span>услуги</span></h6>
+
+				<div class="services__inner">
+
+					<div class="services__item">
+						<div class="services__image cover">
+							<div class="services__image-box">
+								<div class="services__image-line services__image-line1"></div>
+								<div class="services__image-line services__image-line2"></div>
+								<div class="services__image-line services__image-line3"></div>
+							</div>
+							<picture>
+								<source srcset="img/services/services_01.webp" type="image/webp">
+								<img src="img/services/services_01.jpg" alt="">
+							</picture>
+						</div>
+						<div class="services__box">
+							<div class="services__box-title">Медовый массаж от целлюлита и для похудения</div>
+							<p class="services__box-text text">Способствует глубокому очищению кожи. Эффективно удаляет ороговевшие
+								клетки, не раздражая даже самую чувствительную кожу, способствует выведению токсинов.</p>
+							<a class="services__box-btn btn btn--active" href="#"><span>Подробнее</span></a>
+						</div>
+					</div>
+
+					<div class="services__item">
+						<div class="services__box services__box-mdl">
+							<div class="services__box-title">Натуральный экспресс-пилинг для лица и тела</div>
+							<p class="services__box-text text">Направлен на расслабление и успокоение, вследствие чего снимается
+								спазмированность мыщц области шеи, устраняется чувство онемения и усталости.</p>
+							<a class="services__box-btn btn btn--active" href="#"><span>Подробнее</span></a>
+						</div>
+						<div class="services__image cover">
+							<div class="services__image-box">
+								<div class="services__image-line services__image-line1"></div>
+								<div class="services__image-line services__image-line2"></div>
+								<div class="services__image-line services__image-line3"></div>
+							</div>
+							<picture>
+								<source srcset="img/services/services_02.webp" type="image/webp">
+								<img src="img/services/services_02.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="services__item">
+						<div class="services__image cover">
+							<div class="services__image-box">
+								<div class="services__image-line services__image-line1"></div>
+								<div class="services__image-line services__image-line2"></div>
+								<div class="services__image-line services__image-line3"></div>
+							</div>
+							<picture>
+								<source srcset="img/services/services_03.webp" type="image/webp">
+								<img src="img/services/services_03.jpg" alt="">
+							</picture>
+						</div>
+						<div class="services__box">
+							<div class="services__box-title">Оздоровительный массаж для шейного отдела</div>
+							<p class="services__box-text text">Медовый массаж от целлюлита улучшит кровоток, обеспечит разогревающий
+								эффект и поможет отлично очистить кожу и вывести шлаки из вашего организма</p>
+							<a class="services__box-btn btn btn--active" href="#"><span>Подробнее</span></a>
+						</div>
+					</div>
+
+				</div>
+
+
+				<!-- <div class="services__wrapper">
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+					<div class="services__list-col">
+						<div class="services__list">
+							<div class="services__list-icon">
+								<svg class="services__list-icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+							<div class="services__list-title">Массаж лица</div>
+							<div class="services__list-text">Медовый массаж от целлюлита улучшит кровоток иобеспечит разогревающий
+								эффект</div>
+						</div>
+					</div>
+
+				</div> -->
+
+			</div>
+		</section>
+
+
+		<!-- Benefits -->
+		<section class="benefits">
+
+			<div class="leaf leaf_5 rellax" data-rellax-speed="-2">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_05.webp" type="image/webp">
+						<img src="img/leaf/leaf_05.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+
+				<h6 class="benefits__title title">Какие преимущества я получу от <span>сеанса массажа</span>?</h6>
+
+				<div class="benefits__items">
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__item-box">
+						<div class="benefits__item">
+							<div class="benefits__item-title">Cнятие стресса и расслабление</div>
+							<p class="benefits__item-text">Мягкие нажатия во время лечебного массажа мягких тканей снижают уровень
+								стресса и снимают напряжение.</p>
+							<div class="benefits__item-icon">
+								<svg class="benefits__icon">
+									<use xlink:href="#spa"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="benefits__icon-box benefits__icon-box1">
+						<svg class="benefits__icon-bg">
+							<use xlink:href="#spa"></use>
+						</svg>
+					</div>
+					<div class="benefits__icon-box benefits__icon-box2">
+						<svg class="benefits__icon-bg">
+							<use xlink:href="#massage"></use>
+						</svg>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- Passion -->
+		<section class="passion">
+
+			<div class="passion__image-bg passion__image-bg1">
+				<picture>
+					<source class="img" srcset="img/passion/bg_leaf.webp" type="image/webp">
+					<img class="img" src="img/passion/bg_leaf.jpg" alt="">
+				</picture>
+			</div>
+			<div class="passion__image-bg passion__image-bg2">
+				<picture>
+					<source class="img" srcset="img/passion/bg_leaf.webp" type="image/webp">
+					<img class="img" src="img/passion/bg_leaf.jpg" alt="">
+				</picture>
+			</div>
+
+			<div class="container">
+
+				<h6 class="passion__title title">Страсть & Любовь <br> к <span>естественной красоте.</span></h6>
+
+				<div class="passion__inner">
+
+					<div class="passion__item-box passion__item-box1">
+						<div class="passion__image passion__image1 cover">
+							<picture>
+								<source srcset="img/passion/passion_03.webp" type="image/webp">
+								<img src="img/passion/passion_03.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="passion__item-box passion__item-box2">
+						<div class="passion__image passion__image2 cover">
+							<picture>
+								<source srcset="img/passion/passion_01.webp" type="image/webp">
+								<img src="img/passion/passion_01.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="passion__item-box passion__item-box3">
+						<div class="passion__image passion__image3 cover">
+							<picture>
+								<source srcset="img/passion/passion_02.webp" type="image/webp">
+								<img src="img/passion/passion_02.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="passion__item-box passion__item-box4">
+						<div class="passion__image passion__image4 cover">
+							<picture>
+								<source srcset="img/passion/passion_01.webp" type="image/webp">
+								<img src="img/passion/passion_01.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- Cosmetics -->
+		<section class="cosmetics">
+
+			<div class="leaf leaf_6 rellax" data-rellax-speed="-1">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_06.webp" type="image/webp">
+						<img src="img/leaf/leaf_06.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="cosmetics__image-bg cosmetics__image-bg1">
+				<picture>
+					<source class="img" srcset="img/cosmetics/flower_01.webp" type="image/webp">
+					<img class="img" src="img/cosmetics/flower_01.png" alt="">
+				</picture>
+			</div>
+
+			<div class="cosmetics__image-bg cosmetics__image-bg2">
+				<picture>
+					<source class="img" srcset="img/cosmetics/flower_03.webp" type="image/webp">
+					<img class="img" src="img/cosmetics/flower_03.png" alt="">
+				</picture>
+			</div>
+
+			<div class="container">
+
+				<div class="cosmetics__inner">
+
+					<div class="cosmetics__image-box">
+						<div class="cosmetics__image">
+							<picture>
+								<source class="img" srcset="img/cleaning/cleaning.webp" type="image/webp">
+								<img class="img" src="img/cleaning/cleaning.png" alt="">
+							</picture>
+						</div>
+					</div>
+
+					<div class="cosmetics__box">
+						<div class="cosmetics__title title">Моя косметика</div>
+						<div class="cosmetics__text text">Моя косметика подходит для клиентов с разными потребностями
+							(чувствительная кожа, ломкие волосы, аллергии) в которой используются натуральные экологически-чистые
+							компоненты.</div>
+
+						<div class="cosmetics__items">
+
+							<div class="cosmetics__item">
+								<div class="cosmetics__item-image">
+									<picture>
+										<source class="img" srcset="img/cosmetics/cosmetics_01.webp" type="image/webp">
+										<img class="img" src="img/cosmetics/cosmetics_01.png" alt="">
+									</picture>
+								</div>
+							</div>
+
+							<div class="cosmetics__item">
+								<div class="cosmetics__item-image">
+									<picture>
+										<source class="img" srcset="img/cosmetics/cosmetics_01.webp" type="image/webp">
+										<img class="img" src="img/cosmetics/cosmetics_01.png" alt="">
+									</picture>
+								</div>
+							</div>
+
+							<div class="cosmetics__item">
+								<div class="cosmetics__item-image">
+									<picture>
+										<source class="img" srcset="img/cosmetics/cosmetics_01.webp" type="image/webp">
+										<img class="img" src="img/cosmetics/cosmetics_01.png" alt="">
+									</picture>
+								</div>
+							</div>
+
+							<div class="cosmetics__item">
+								<div class="cosmetics__item-image">
+									<picture>
+										<source class="img" srcset="img/cosmetics/cosmetics_01.webp" type="image/webp">
+										<img class="img" src="img/cosmetics/cosmetics_01.png" alt="">
+									</picture>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- Sertificate -->
+		<section class="sertificate">
+
+			<div class="leaf leaf_7 rellax" data-rellax-speed="-1">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_07.webp" type="image/webp">
+						<img src="img/leaf/leaf_07.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+
+				<div class="sertificate__inner">
+
+					<div class="sertificate__box">
+						<div class="sertificate__box-title title">Подарочные <span>сертификаты</span></div>
+						<div class="sertificate__box-text text">Не знаете как порадовать свою половинку, родного или близкого
+							человека? Благодаря нам - красоту стало дарить намного проще и приятнее!</div>
+						<div class="sertificate__box-text text">У нас в наличии подарочные сертификаты на сумму 3000&#8381;, 5000&#8381;, 7000&#8381;.</div>
+						<div class="sertificate__box-text text">Приобретайте и дарите сертификаты, по которым можно воспользоваться
+							услугами салона или приобрести косметику!</div>
+						<a class="sertificate__box-btn btn" href="#"><span>Приобрести сертификат</span></a>
+					</div>
+
+					<div class="sertificate__image-box">
+						<div class="sertificate__image">
+							<picture>
+								<source class="img" srcset="img/license/license.webp" type="image/webp">
+								<img class="img" src="img/license/license.jpg" alt="">
+							</picture>
+						</div>
+						<div class="sertificate__image-leaves sertificate__image-leaves1">
+							<picture>
+								<source class="img" srcset="img/sertificate/sertificate_leave-01.webp" type="image/webp">
+								<img class="img" src="img/sertificate/sertificate_leave-01.png" alt="">
+							</picture>
+						</div>
+						<div class="sertificate__image-leaves sertificate__image-leaves2">
+							<picture>
+								<source class="img" srcset="img/sertificate/sertificate_leave-02.webp" type="image/webp">
+								<img class="img" src="img/sertificate/sertificate_leave-02.png" alt="">
+							</picture>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- License -->
+		<section class="license">
+
+			<div class="license__image-bg">
+				<picture>
+					<source class="img" srcset="img/sertificate/sertificate_leave-02.webp" type="image/webp">
+					<img class="img" src="img/sertificate/sertificate_leave-02.png" alt="">
+				</picture>
+			</div>
+
+			<div class="license__inner">
+
+				<div class="license__box">
+					<h6 class="license__title title">50+ Лицензий и <span>Сертификатов</span></h6>
+					<p class="license__text text">Наш дизайнер уже сделал множество красивых прототипов комнат, которые вас
+						вдохновляют.</p>
+				</div>
+
+				<div class="license__slider-box">
+
+					<div class="license__slider swiper-container">
+						<div class="license__wrapper swiper-wrapper">
+
+							<div class="license__slide swiper-slide">
+								<div class="license__slide-inner">
+
+									<div class="license__image">
+										<picture>
+											<source class="img" srcset="img/license/license.webp" type="image/webp">
+											<img class="img" src="img/license/license.jpg" alt="">
+										</picture>
+									</div>
+
+									<div class="license__slide-box">
+										<div class="license__slide-rect rect"></div>
+										<div class="license__slide-suptitle">01 <span>——</span> Лицензия</div>
+										<div class="license__slide-title">Лицензия на массаж</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="license__slide swiper-slide">
+								<div class="license__slide-inner">
+
+									<div class="license__image">
+										<picture>
+											<source class="img" srcset="img/license/license.webp" type="image/webp">
+											<img class="img" src="img/license/license.jpg" alt="">
+										</picture>
+									</div>
+
+									<div class="license__slide-box">
+										<div class="license__slide-rect rect"></div>
+										<div class="license__slide-suptitle">01 <span>——</span> Лицензия</div>
+										<div class="license__slide-title">Лицензия на массаж</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="license__slide swiper-slide">
+								<div class="license__slide-inner">
+
+									<div class="license__image">
+										<picture>
+											<source class="img" srcset="img/license/license.webp" type="image/webp">
+											<img class="img" src="img/license/license.jpg" alt="">
+										</picture>
+									</div>
+
+									<div class="license__slide-box">
+										<div class="license__slide-rect rect"></div>
+										<div class="license__slide-suptitle">01 <span>——</span> Лицензия</div>
+										<div class="license__slide-title">Лицензия на массаж</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="license__slide swiper-slide">
+								<div class="license__slide-inner">
+
+									<div class="license__image">
+										<picture>
+											<source class="img" srcset="img/license/license.webp" type="image/webp">
+											<img class="img" src="img/license/license.jpg" alt="">
+										</picture>
+									</div>
+
+									<div class="license__slide-box">
+										<div class="license__slide-rect rect"></div>
+										<div class="license__slide-suptitle">01 <span>——</span> Лицензия</div>
+										<div class="license__slide-title">Лицензия на массаж</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+					</div>
+
+					<div class="swiper-navigation">
+						<div class="license-arrow license-btn-next swiper-button-next"></div>
+						<div class="license-arrow license-btn-prev swiper-button-prev"></div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<!-- Testimonials -->
+		<section class="testimonials">
+
+			<div class="leaf leaf_8 rellax" data-rellax-speed="-1">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_01.webp" type="image/webp">
+						<img src="img/leaf/leaf_01.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+				<h6 class="testimonials__title title">Что говорят <span>клиенты</span>?</h6>
+
+				<div class="testimonials__inner">
+					<div class="testimonials__slider swiper-container">
+						<div class="testimonials__wrapper swiper-wrapper">
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Наталья</div>
+										<div class="testimonials__item-text">Я обожаю этот SPA салон. Сначала ходила сюда с подружкой,
+											теперь постоянно посещаю его с мужем. Групповые программы огонь! Попробуйте.</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Виктория</div>
+										<div class="testimonials__item-text">Много пробовала разных салонов, но этот просто покорил. Такое
+											обслуживаниеЮ такой чай! И, главное, я начала чувствовать себя лучше после регулярных программ.
+										</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Ольга</div>
+										<div class="testimonials__item-text">Скажу честно, боюсь массажа. Но здесь просто золотые ручки.
+											Разминает меня после рабочего дня. Рекомендую всем массаж в этой студии. Просто ух!</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Наталья</div>
+										<div class="testimonials__item-text">Я обожаю этот SPA салон. Сначала ходила сюда с подружкой,
+											теперь постоянно посещаю его с мужем. Групповые программы огонь! Попробуйте.</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Виктория</div>
+										<div class="testimonials__item-text">Много пробовала разных салонов, но этот просто покорил. Такое
+											обслуживаниеЮ такой чай! И, главное, я начала чувствовать себя лучше после регулярных программ.
+										</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="testimonials__slide swiper-slide">
+								<div class="testimonials__item-box">
+									<div class="testimonials__item">
+										<div class="testimonials__item-title">Ольга</div>
+										<div class="testimonials__item-text">Скажу честно, боюсь массажа. Но здесь просто золотые ручки.
+											Разминает меня после рабочего дня. Рекомендую всем массаж в этой студии. Просто ух!</div>
+										<div class="testimonials__item-icon">
+											<svg class="testimonials__icon">
+												<use xlink:href="#spa"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="testimonials-pagination swiper-pagination"></div>
+
+					</div>
+
+					<div class="testimonials-navigation swiper-navigation">
+						<div class="testimonials-arrow testimonials-btn-next swiper-button-next"></div>
+						<div class="testimonials-arrow testimonials-btn-prev swiper-button-prev"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- Insta -->
+		<section class="insta">
+			<div class="container">
+
+				<div class="insta__box">
+					<h6 class="insta__title title">Подписывайтесь на наш <span>Instagram</span></h6>
+					<p class="insta__text text">Мы делимся полезной информацией и советами по уходу за кожей</p>
+				</div>
+
+				<div class="insta__inner popup-gallery">
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-sml" href="img/passion/passion_01.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_01.webp" type="image/webp">
+									<img src="img/passion/passion_01.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_02.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_02.webp" type="image/webp">
+									<img src="img/passion/passion_02.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_03.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_03.webp" type="image/webp">
+									<img src="img/passion/passion_03.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-sml" href="img/passion/passion_01.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_01.webp" type="image/webp">
+									<img src="img/passion/passion_01.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-sml" href="img/passion/passion_02.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_02.webp" type="image/webp">
+									<img src="img/passion/passion_02.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_03.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_03.webp" type="image/webp">
+									<img src="img/passion/passion_03.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_01.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_01.webp" type="image/webp">
+									<img src="img/passion/passion_01.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-sml" href="img/passion/passion_02.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_02.webp" type="image/webp">
+									<img src="img/passion/passion_02.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-sml" href="img/passion/passion_03.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_03.webp" type="image/webp">
+									<img src="img/passion/passion_03.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_01.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_01.webp" type="image/webp">
+									<img src="img/passion/passion_01.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+					<div class="insta__col">
+						<a class="insta__item insta__item-lrg" href="img/passion/passion_02.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_02.webp" type="image/webp">
+									<img src="img/passion/passion_02.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+						<a class="insta__item insta__item-sml" href="img/passion/passion_03.jpg">
+							<div class="insta__image cover">
+								<picture>
+									<source srcset="img/passion/passion_03.webp" type="image/webp">
+									<img src="img/passion/passion_03.jpg" alt="">
+								</picture>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="insta__btn-box center"><a class="insta__btn btn" href="#">Перейти в Instagram</a></div>
+
+			</div>
+		</section>
+
+
+		<!-- FAQ -->
+		<section class="faq">
+
+			<div class="leaf leaf_9 rellax" data-rellax-speed="1">
+				<div class="leaf__image">
+					<picture>
+						<source srcset="img/leaf/leaf_02.webp" type="image/webp">
+						<img src="img/leaf/leaf_02.png" alt="">
+					</picture>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="faq__inner">
+
+					<div class="faq__accordion-box">
+
+						<h6 class="faq__title title">Часто задаваемые <span>вопросы</span></h6>
+
+						<div class="faq__accordion active">
+							<div class="faq__accordion-tab active">
+								<div class="faq__accordion-title">Могу ли я прийти без записи?</div>
+								<div class="faq__accordion-icon">
+									<svg class="accordion__icon">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="faq__accordion-content">
+								<p class="faq__accordion-text">Да, но не факт, что мастера будут свободны и готовы вас принять. Лучше
+									записаться заранее, чтобы быть уверенным, что мастер вас примет.</p>
+							</div>
+						</div>
+
+						<div class="faq__accordion">
+							<div class="faq__accordion-tab">
+								<div class="faq__accordion-title">Какие услуги вы оказываете?</div>
+								<div class="faq__accordion-icon">
+									<svg class="accordion__icon">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="faq__accordion-content">
+								<p class="faq__accordion-text">Да, но не факт, что мастера будут свободны и готовы вас принять. Лучше
+									записаться заранее, чтобы быть уверенным, что мастер вас примет.</p>
+							</div>
+						</div>
+
+						<div class="faq__accordion">
+							<div class="faq__accordion-tab">
+								<div class="faq__accordion-title">Услуги выездного салона?</div>
+								<div class="faq__accordion-icon">
+									<svg class="accordion__icon">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="faq__accordion-content">
+								<p class="faq__accordion-text">Да, но не факт, что мастера будут свободны и готовы вас принять. Лучше
+									записаться заранее, чтобы быть уверенным, что мастер вас примет.</p>
+							</div>
+						</div>
+
+						<div class="faq__accordion">
+							<div class="faq__accordion-tab">
+								<div class="faq__accordion-title">Принимаете детей?</div>
+								<div class="faq__accordion-icon">
+									<svg class="accordion__icon">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="faq__accordion-content">
+								<p class="faq__accordion-text">Да, но не факт, что мастера будут свободны и готовы вас принять. Лучше
+									записаться заранее, чтобы быть уверенным, что мастер вас примет.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="faq__image-box">
+						<div class="faq__image cover">
+							<div class="services__image-box">
+								<div class="services__image-line services__image-line1"></div>
+								<div class="services__image-line services__image-line2"></div>
+								<div class="services__image-line services__image-line3"></div>
+							</div>
+							<picture>
+								<source srcset="img/faq/faq.webp" type="image/webp">
+								<img src="img/faq/faq.jpg" alt="">
+							</picture>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- Map -->
+		<section class="map">
+
+			<div class="map__box">
+
+				<div class="map__item">
+					<div class="map__item-title">Телефон</div>
+					<a class="map__item-num" href="#">+7 (950) 151-23-89</a>
+				</div>
+
+				<div class="map__item">
+					<div class="map__item-title">Адрес</div>
+					<div class="map__item-text text">г. Ижевск, ул. Репина, 35</div>
+				</div>
+
+				<div class="map__item">
+					<div class="map__item-title">Время работы</div>
+					<div class="map__item-text text">По записи</div>
+				</div>
+
+				<div class="map__item">
+					<div class="map__item-title">Соц сети</div>
+					<div class="map__item-links">
+						<a class="map__item-link" href="#" target="blank">
+							<svg class="map__icon">
+								<use xlink:href="#vk"></use>
+							</svg>
+						</a>
+						<a class="map__item-link" href="#" target="blank">
+							<svg class="map__icon">
+								<use xlink:href="#vk"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="map__inner">
+				<iframe class="map__frame"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1856.0827061520938!2d53.23162273741428!3d56.86902516590355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e13906ad284837%3A0x4e69cde64d8b9736!2z0JzQmNCR0KEg0L3QsCDQoNC10L_QuNC90LAgKNCY0LbQtdCy0YHQuiksINCc0L3QvtCz0L7RhNGD0L3QutGG0LjQvtC90LDQu9GM0L3Ri9C5INC00LjQsNCz0L3QvtGB0YLQuNGH0LXRgdC60LjQuSDRhtC10L3RgtGALiDQptC10L3RgtGAINGN0L_QuNC70LXQv9GB0LjQuA!5e0!3m2!1sru!2sru!4v1625215994680!5m2!1sru!2sru"
+					style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+
+		</section>
+
+
+
+
+		<!-- Footer -->
+		<footer class="footer">
+  <div class="container">
+
+    <div class="footer__inner">
+
+      <a class="header__logo" href="#">Spa<span>Salon</span></a>
+
+      <a class="footer__call header__call" href="#">
+
+        <div class="header__call-icon">
+          <svg class="header__icon">
+            <use xlink:href="#phone"></use>
+          </svg>
+        </div>
+
+        <div class="header__call-num">+7 (950) 151-23-89</div>
+        
+      </a>
+      
+    </div>
+
+  </div>
+
+  <div class="footer__copy-box"><a class="footer__copy" href="#" target="blank">Code by <span>St4y</span></a></div>
+
+</footer>
+
+
+		<!-- Scripts -->
+		<script src="js/libs.min.js"></script>
+		<script src="js/main.min.js"></script>
+	</div>
+</body>
+
+</html>
+
+
+<!-- 
+	<picture>
+		<source class="img" srcset="img/intro/logo.webp" type="image/webp">
+		<img class="img" src="img/intro/logo.png" alt="">
+	</picture>
+ -->

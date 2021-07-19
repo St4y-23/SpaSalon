@@ -1,0 +1,454 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $text;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+}
+
+section {
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+  color: $text;
+  overflow-x: hidden;
+  position: relative;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.content {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 75%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.rect{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#fff, .9);
+  z-index: 2;
+}
+
+.center {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.cover {
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.title{
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  span{
+    font-style: italic;
+    color: $second;
+  }
+}
+
+.text{
+  font-size: 1.1rem;
+  color: $text;
+  margin-bottom: .5rem;
+}
+
+.grad{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #87e84b, #27ae60, #9dd523, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.btn{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 45px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  transition: linear .2s;
+  background: linear-gradient(-45deg, #87e84b, #27ae60, #9dd523, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  span{
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover{
+    box-shadow: 2px 5px 25px 0px rgba($second, .7);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn--active{
+  color: $second;
+
+  &::before{
+    position: absolute;
+    content: '';
+    width: 96%;
+    height: 86%;
+    background-color: #fff;
+    @include center;
+    border-radius: 50px;
+    transition: linear .2s;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  color: $second !important;
+}
+
+
+// Burger
+.ham__box{
+  display: none;
+}
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40px;
+  display: block;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.ham6 .top {
+  stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+.ham6.active .top {
+  stroke-dashoffset: -132px;
+}
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
+}
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
+}
+
+
+// Preloader
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    li {
+      list-style: none;
+      height: 20px;
+      width: 20px;
+      background-color: red;
+      margin: 0 4px;
+      border-radius: 50%;
+      animation: bounce 1s linear infinite;
+    }
+  }
+
+  ul {
+    li:nth-child(1) {
+      animation-delay: 0.2s;
+      background-color: #961419;
+    }
+
+    li:nth-child(2) {
+      animation-delay: 0.6s;
+      background-color: #d11c23;
+    }
+
+    li:nth-child(3) {
+      animation-delay: 0.1s;
+      background-color: #e21e25;
+    }
+
+    li:nth-child(4) {
+      animation-delay: 0.8s;
+      background-color: #ff8152;
+    }
+
+    li:nth-child(5) {
+      animation-delay: 0.5s;
+      background-color: #ffc246;
+    }
+    li:nth-child(6) {
+      animation-delay: 0.1s;
+      background-color: #f9f871;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.preloader__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 16;
+  background-color: $skin;
+  overflow: hidden;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  z-index: 2;
+}
+
+
+// Leaf
+.leaf{
+  position: absolute;
+}
+
+.leaf_0{
+  left: 3%;
+  top: 10%;
+
+  img{
+    max-width: 13vw;
+  }
+}
+
+.leaf_1{
+  right: 10%;
+  top: 12%;
+}
+
+.leaf_2{
+  right: 15%;
+  top: 0%;
+}
+
+.leaf_3{
+  left: 10%;
+  top: 15%;
+  transform: rotate(180deg);
+}
+
+.leaf_4{
+  z-index: -1;
+  right: -5%;
+  top: 60%;
+  transform: rotate(180deg);
+}
+
+.leaf_5{
+  left: 3%;
+  top: -70%;
+}
+
+.leaf_6{
+  right: 3%;
+  top: 0%;
+
+  img{
+    max-width: 10vw;
+  }
+}
+
+.leaf_7{
+  left: 3%;
+  top: -15%;
+  transform: rotate(180deg);
+
+  img{
+    max-width: 8vw;
+  }
+}
+
+.leaf_8{
+  right: 3%;
+  top: -70%;
+}
+
+.leaf_9{
+  left: 3%;
+  bottom: -70%;
+  transform: rotate(270deg);
+}
+
+
+// Pagination
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 15px;
+  left: 30px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  border-radius: 50%;
+  background: $text;
+  position: relative;
+  transition: linear .2s;
+
+  &::before{
+    position: absolute;
+    content: '';
+    @include center;
+    width: 240%;
+    height: 240%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: linear .2s;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $second;
+
+  &::before{
+    border: 1px solid $second;
+  }
+}

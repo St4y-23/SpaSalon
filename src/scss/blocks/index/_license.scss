@@ -1,0 +1,164 @@
+.license{
+  padding: 4rem 0;
+  background-color: $skin;
+}
+
+.license__image-bg{
+  position: absolute;
+  left: -15vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35vw;
+  opacity: 0.5;
+}
+
+.license__inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 12%;
+}
+
+.license__box{
+  width: 35%;
+  padding-right: 2rem;
+}
+
+.license__title{
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 80%;
+}
+
+.license__text{
+  max-width: 80%;
+  color: $text;
+}
+
+
+.license__slider-box{
+  width: 65%;
+  position: relative;
+}
+
+.license__slider{
+  height: 33vw;
+}
+
+.license__wrapper{
+  align-items: flex-start;
+}
+
+.license__slide{
+  width: 30%;
+  height: auto;
+  transition: linear .2s;
+}
+
+.license__slide.swiper-slide-active{
+  width: 40%;
+
+  .license__slide-box{
+    padding: 25px;
+    opacity: 1;
+  }
+  .license__slide-suptitle{
+    font-size: 1.1rem;
+  }
+  
+  .license__slide-title{
+    font-size: 1.5rem;
+  }
+}
+
+.license__slide-inner{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  transition: linear .2s;
+}
+
+.license__image{
+  transition: linear .2s;
+}
+
+.license__slide-box{
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  z-index: 3;
+  padding: 17px;
+  transition: linear .2s;
+}
+
+.license__slide-rect{
+  background-color: rgba(rgb(223, 223, 223), .6);
+  backdrop-filter: blur(3px);
+}
+
+.license__slide-suptitle{
+  position: relative;
+  z-index: 3;
+  color: #616161;
+  font-size: 0.8rem;
+  margin-bottom: .5rem;
+  transition: linear .2s;
+
+  span{
+    margin: 0 7px;
+  }
+}
+
+.license__slide-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 3;
+  transition: linear .2s;
+}
+
+
+.license-arrow{
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba($text, .7);
+  transition: linear .2s;
+
+  &::after{
+    font-size: 20px;
+    transition: linear .2s;
+  }
+
+  &:hover{
+    background-color: $second;
+
+    &::after{
+      color: #fff !important;
+    }
+  }
+}
+
+.license-btn-prev{
+  left: -24px;
+
+  &::after{
+    margin-left: -2px;
+    margin-top: 2px;
+  }
+}
+
+.license-btn-next{
+  right: 170px;
+
+  &::after{
+    margin-right: -2px;
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,60 @@
+.cosmetics{
+  background-color: $skin;
+  padding-top: 5rem;
+  overflow: visible;
+}
+
+.cosmetics__image-bg{
+  position: absolute;
+  width: 15%;
+  z-index: 1;
+}
+.cosmetics__image-bg1{
+  top: 8%;
+  right: 5%;
+  width: 15%;
+}
+.cosmetics__image-bg2{
+  bottom: 8%;
+  left: 5%;
+  width: 20%;
+}
+
+.cosmetics__inner{
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cosmetics__image-box{
+  width: 50%;
+  padding: 0 5%;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.cosmetics__box{
+  width: 50%;
+  padding-bottom: 5rem;
+}
+
+.cosmetics__title{
+  text-align: left;
+  color: $second;
+}
+
+.cosmetics__items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cosmetics__item{
+  width: 50%;
+  margin: 1rem 0;
+}
+
+.cosmetics__item-image{
+  max-width: 60%;
+}

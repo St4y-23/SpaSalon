@@ -1,0 +1,26 @@
+.footer{
+  background-color: $bg;
+}
+
+.footer__inner{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.footer__copy-box{
+  width: 100%;
+  background-color: $second;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.footer__copy{
+  color: #fff;
+
+  span{
+    font-weight: 600;
+    color: $text;
+  }
+}
+
